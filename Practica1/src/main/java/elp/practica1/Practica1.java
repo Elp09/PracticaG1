@@ -24,7 +24,8 @@ public class Practica1 {
         prestamos.mostrar_prestamos();
         prestamos.registrar_prestamo("L-01", "U-01");
         
-        System.out.println("este es un ejemplo de git push");
+        
+        System.out.println("esto es un ejemplo nada mas para ver como se hace el commit en git :))");
     }
     
     
