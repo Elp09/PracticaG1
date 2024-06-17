@@ -22,7 +22,9 @@ public class Practica1 {
         
         prestamos.registrar_prestamo("L-01", "U-01");
         prestamos.mostrar_prestamos();
-        prestamos.registrar_prestamo("L-01", "U-01");   
+        prestamos.registrar_prestamo("L-01", "U-01");
+        
+        System.out.println("este es un ejemplo de git push");
     }
     
     
