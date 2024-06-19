@@ -2,43 +2,46 @@ package elp.practica1;
 
 import java.util.ArrayList;
 
-
 public class GestorLibros {
-    
+
     ArrayList<Libro> libros;
 
     public GestorLibros() {
         libros = new ArrayList();
     }
-    
-    
-    public void anadir_libro(Libro libro){
+
+    public void anadir_libro(Libro libro) {
         libros.add(libro);
     }
-    
-    public void eliminar_libro(String id){
+
+    public void eliminar_libro(String id) {
         boolean removed = false;
+        Libro libro_aborrar = null;
         for (Libro libro : libros) {
-            if (libro.getId().equals(id)){
+
+            if (libro.getId().equals(id)) {
                 removed = true;
-                libros.remove(libro);
+                libro_aborrar = libro;
             }
         }
-        if (!removed){
+
+        if (removed && libro_aborrar != null) {
+            libros.remove(libro_aborrar);
+        } else {
             System.out.println("No se elimino ningun libro");
         }
-            
+
     }
-    
-    public void buscar_libro(String id){
+
+    public void buscar_libro(String id) {
         boolean encontrado = false;
         for (Libro libro : libros) {
-            if (libro.getId().equals(id)){
+            if (libro.getId().equals(id)) {
                 encontrado = true;
                 System.out.println("Se encontro el libro: " + libro);
             }
         }
-        if (!encontrado){
+        if (!encontrado) {
             System.out.println("No se encontro ningun libro");
         }
     }
@@ -50,8 +53,5 @@ public class GestorLibros {
     public void setLibros(ArrayList<Libro> libros) {
         this.libros = libros;
     }
-    
-    
-    
-    
+
 }

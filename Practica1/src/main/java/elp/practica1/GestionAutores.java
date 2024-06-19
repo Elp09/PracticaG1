@@ -37,7 +37,7 @@ public void mostrarAutores() {
         for (Map.Entry<String, String> entry : authors.entrySet()) {
             if (entry.getKey().equals(id)) {
                 authors.remove(id);
-                System.out.println("Se eliminó el autor con el ID: " + id);
+                System.out.println("Se eliminó el autor con el ID: " + id + " Su nombre es: "+ entry.getValue());
                 encontrado = true;
             }
         }
@@ -51,7 +51,7 @@ public void mostrarAutores() {
         boolean encontrado = false;
         for (Map.Entry<String, String> entry : authors.entrySet()) {
             if (entry.getKey().equals(id)) {
-            System.out.println("Se encontro el autor con el ID: " + id);
+            System.out.println("Se encontro el autor con el ID: " + id + " Su nombre es: "+ entry.getValue());
                 encontrado = true;
             }
         }

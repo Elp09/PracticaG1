@@ -14,6 +14,7 @@ public class Menuu {
         GestionAutores gautores = new GestionAutores();
         
         while (opc !=9) {
+            String id_libro;
 
             opc = Integer.parseInt(JOptionPane.showInputDialog(null, """
                                                                               -----Menu Biblioteca------
@@ -35,12 +36,12 @@ public class Menuu {
                     glibros.anadir_libro(agregarLibro);
                     break;
                 case 2:
-                    String eliminar_libro = JOptionPane.showInputDialog(null, "Digite el libro que desea agregar:"); 
-                    glibros.eliminar_libro(eliminar_libro);
+                    id_libro = JOptionPane.showInputDialog(null, "Digite el id del libro que desea eliminar:"); 
+                    glibros.eliminar_libro(id_libro);
                     break;
                 case 3:
-                    String buscarlibro = JOptionPane.showInputDialog(null, "Digite el libro que desea buscar:");
-                    glibros.buscar_libro(buscarlibro);
+                    id_libro = JOptionPane.showInputDialog(null, "Digite el libro que desea buscar:");
+                    glibros.buscar_libro(id_libro);
                     break;
 
                 case 4:
